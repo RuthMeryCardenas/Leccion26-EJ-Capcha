@@ -8,11 +8,13 @@ window.addEventListener("load",function () {
 
   reloadCaptchaButton.addEventListener("click", function () {
     valorCaptchaInput.value = randomCaptcha();
+    confirmCaptchaInput.value = null;
+    resultsInput.value = null;
   })
   setCaptchaButton.addEventListener("click", function () {
     var a = valorCaptchaInput.value;
     var b = confirmCaptchaInput.value;
-    if (a = b) {
+    if (b == a) {
       resultsInput.value = "ok";
     }else {
       resultsInput.value = "error";
